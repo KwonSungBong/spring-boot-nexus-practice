@@ -22,7 +22,7 @@ uploadArchives {
 			}
 			pom.groupId = 'com.example.demo'
 			pom.artifactId = 'common-api'
-			pom.version = '0.0.1-SNAPSHOT'
+			pom.version = '0.0.1'
 		}
 	}
 }
