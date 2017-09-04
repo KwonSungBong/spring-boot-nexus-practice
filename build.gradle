@@ -1,0 +1,36 @@
+subprojects {
+    buildscript {
+        ext {
+            springBootVersion = '1.5.6.RELEASE'
+        }
+        repositories {
+            maven {
+                url "$MAVEN_URL/content/groups/public"
+                credentials {
+                    username MAVEN_USER_ID
+                    password MAVEN_USER_PASSWORD
+                }
+            }
+        }
+        dependencies {
+            classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        }
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        maven {
+            url "$MAVEN_URL/content/groups/public"
+            credentials {
+                username MAVEN_USER_ID
+                password MAVEN_USER_PASSWORD
+            }
+        }
+    }
+}
